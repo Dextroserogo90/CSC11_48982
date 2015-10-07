@@ -8,6 +8,7 @@
 #include <iostream>
 #include <cstdlib>
 
+
 using namespace std;
 
 //Execution begins here
@@ -18,6 +19,7 @@ int main(int argc, char** argv) {
    cout<<"Enter the number of day which you attend class on [1-5 for M-F]: ";
    cin>>days;
    
+   cout<<"Switch loop: "<<endl;
    switch(days){
     case 1: 
         cout<<"11"<<endl;
@@ -39,6 +41,7 @@ int main(int argc, char** argv) {
    }
    
 /******************if-else ************************************ */
+   cout<<"If-else loop: "<<endl;
    if(days == 1){
            cout<<"11"<<endl;
            }
@@ -59,7 +62,7 @@ int main(int argc, char** argv) {
         }
   
 //Exit stage right
-    system("PAUSE");
+  // system("pause");
     return 0;
 }
 
