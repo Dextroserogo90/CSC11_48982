@@ -13,27 +13,33 @@ using namespace std;
 //Execution begins here
 int main(int argc, char** argv) {
 
-   char days;
+   int days;
    
-   cout<<"Enter the first letter of day which you attend class on [M-F]: ";
+   cout<<"Enter the number of day which you attend class on [1-5 for M-F]: ";
    cin>>days;
    
    switch(days){
-    case 'M': 
-        cout<<"11";
+    case 1: 
+        cout<<"11"<<endl;
         break;
-    case 'W': 
-        cout<<"11";
+    case 2: 
+        cout<<"5"<<endl;
     break;
-    case 'T': 
-        cout<<"5";
+    case 3: 
+        cout<<"11"<<endl;
     break;
-       case 'TH':
-           cout<<"5";
+       case 4:
+           cout<<"5"<<endl;
            break;
+        case 5:
+            cout<<"1"<<endl;
+            break;
        default:
-           cout<<"0";
+           cout<<"0"<<endl;
    }
+   
+//Exit stage right
+    system("PAUSE");
     return 0;
 }
 
