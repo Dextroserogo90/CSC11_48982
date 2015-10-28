@@ -10,6 +10,7 @@ void emp_pay();
 void isp();
 void fib();
 
+
 int main(int argc, char *argv[])
 {
 	_menu:
@@ -80,7 +81,7 @@ _second:
 
 char R1;
 unsigned int R2 = 0;
-unsigned int R3 = 0;
+unsigned int R3 = 0, temp1,temp2;
 
 //Prompt user for the package
 printf("Enter the package you have subscribed to \n"
@@ -114,16 +115,20 @@ else if(22<R2){
 }
 goto _output;
 
+
 _package2:
-R2=35;
+R3=35;
 
 if(22<R2<=44){
     R3+=(R2-22)*2;
 }
 else if(44<R2){
-    R3+=(22*2)+(R2-44)*4;
+    temp1= (22*2);
+    temp2 = 35 + ((R2-44)*4);   
+    R3 = temp1 + temp2;       
 }
 goto _output;
+
 
 _package3:
 R3=40;
@@ -131,7 +136,9 @@ if(33<R2<=66){
     R3+=(R2-33)*1;
 }
 else if(66<=R2){
-    R3+=(33*1)+(R2-66)*2;
+    temp1 = 33*1;
+    temp2 = R2-66*2;
+    R3=temp1 + temp2;
 }
 goto _output;
 
@@ -158,9 +165,17 @@ R0= R1 + R2;
 R1 = R2;
 R2 = R0;
 R3--;
+if (R3 > 2) {
+    cout<<R0<<endl;
+}else{
+    cout<<R0<<"<--- This is your last term\n";
+}
 if(R3!=2)goto _theloop;
 
+
+
+
 //output
-printf("%d",R0);
-cout<<endl;
+//printf("%d",R0);
+//cout<<endl;
 }
